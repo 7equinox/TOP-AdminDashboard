@@ -11,6 +11,9 @@
 :root {
     --prmry-dark-bg-clr: #111;
     --scndry-dark-bg-clr: #565656;
+    --hover-white-bg-clr: #dedede60;
+    --active-white-bg-clr: #dededec0;
+    --active-pink-bg-clr: #9D81BA;
 
     --prmry-white-color: #dedede;
 
@@ -60,6 +63,7 @@ path {
 }
 
 .forty-px {
+    min-width: 40px;
     width: 40px;
 }
 
@@ -90,6 +94,24 @@ header > * {
     margin: var(--gap-default-space);
 }
 
+.header-logo:hover,
+.header-search > label:hover,
+.header-prof > a:nth-child(1):hover,
+.main-nav-greet > a:hover,
+.post-reaction > a > svg:hover {
+    background-color: var(--hover-white-bg-clr);
+    border-radius: 25%;
+}
+
+.header-logo:active,
+.header-search > label:active,
+.header-prof > a:nth-child(1):active,
+.main-nav-greet > a:active,
+.post-reaction > a > svg:active {
+    background-color: var(--active-white-bg-clr);
+    border-radius: 25%;
+}
+
 .header-search,
 .header-prof,
 .header-prof > a {
@@ -104,6 +126,10 @@ header > * {
     width: 65%;
 }
 
+.header-search > label:hover {
+    cursor: pointer;
+}
+
 .header-search > input {
     background-color: var(--scndry-dark-bg-clr);
     height: 40px;
@@ -112,6 +138,19 @@ header > * {
     border-radius: 20px;
 
     flex: 1;
+}
+
+.header-search > input:hover {
+    background-color: #dedede90;
+}
+
+.header-search > input:active {
+    background-color: var(--active-white-bg-clr);
+}
+
+.header-search > input:focus {
+    outline: 5px solid var(--prmry-white-color);
+    box-shadow: 0 0 100px 10px var(--scndry-dark-bg-clr);
 }
 
 .header-prof > a {
@@ -144,6 +183,22 @@ aside {
 
 .main-aside-menu > ul {
     row-gap: var(--gap-default-space);
+    padding-right: var(--gap-default-space);
+}
+
+.menu-active {
+    background-color: #dedede30;
+}
+
+.main-aside-menu > ul > li > a:not(.menu-active):hover,
+.header-prof > a:nth-child(2):hover {
+    background-color: var(--hover-white-bg-clr);
+}
+
+.main-aside-menu > ul > li > a:active,
+.main-aside-menu > ul > li > a:not(.menu-active):active,
+.header-prof > a:nth-child(2):active {
+    background-color: var(--active-white-bg-clr);
 }
 
 nav {
@@ -180,6 +235,23 @@ nav {
     font-size: 18px;
 }
 
+.name-admin > a:hover,
+.subsect-post-details:hover,
+.post-reaction > a:hover,
+.chat-box:hover,
+.task-box:hover {
+    text-decoration: underline;
+}
+
+.name-admin > a:active,
+.subsect-post-details:active,
+.post-reaction > a:active,
+.chat-box:active,
+.task-box:active {
+    color: var(--active-pink-bg-clr);
+    text-decoration: underline;
+}
+
 .main-nav-btns {
     display: flex;
     flex-direction: row;
@@ -195,6 +267,14 @@ nav {
     border: #fff 1px solid;
     border-radius: 25px;
     display: block;
+}
+
+.main-nav-btns > li > a:hover {
+    background-color: #dedede00;
+}
+
+.main-nav-btns > li > a:active {
+    background-color: var(--active-pink-bg-clr);
 }
 
 main {
@@ -284,6 +364,7 @@ main {
 .task-title-ctgry > h4,
 .task-box > p {
     font-size: var(--gap-default-space);
+    line-height: 1.4;
 }
 
 .post-reaction {
