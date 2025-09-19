@@ -12,6 +12,8 @@
     --prmry-dark-bg-clr: #111;
     --scndry-dark-bg-clr: #565656;
 
+    --prmry-white-color: #dedede;
+
     --gap-default-space: 10px;
     --gap-scndry-space: 15px;
     --gap-trtry-space: 20px;
@@ -31,7 +33,7 @@ body {
 * {
     padding: 0;
     margin: 0;
-    color: #dedede;
+    color: var(--prmry-white-color);
     font-family: 'VictorMono-Thin', 'Open Sans', 'Helvetica Neue', sans-serif;
     list-style-type: none;
     text-decoration: none;
@@ -47,6 +49,26 @@ body {
         'menu main main main'
         'menu main main main';
     gap: 3px;
+}
+
+path {
+    fill: var(--prmry-white-color);
+}
+
+.thirty-px {
+    width: 30px;
+}
+
+.forty-px {
+    width: 40px;
+}
+
+.fifty-px {
+    width: 50px;
+}
+
+.sixty-px {
+    width: 60px;
 }
 
 header,
@@ -66,12 +88,6 @@ header {
 
 header > * {
     margin: var(--gap-default-space);
-}
-
-.header-logo > img,
-.header-prof > a > img,
-.main-nav-greet > a > img {
-    border-radius: 50%;
 }
 
 .header-search,
@@ -272,6 +288,7 @@ main {
 
 .post-reaction {
     margin-left: auto;
+    text-align: right;
 }
 
 .post-reaction > a {
@@ -281,7 +298,7 @@ main {
     align-items: center;
 }
 
-.post-reaction > a > img {
+.post-reaction > a > svg {
     margin-right: 3px;
 }
 
@@ -308,7 +325,7 @@ main {
 .chat-box:not(:nth-last-child(-n+1)),
 .task-box:not(:nth-last-child(-n+1)) {
     padding-bottom: var(--gap-default-space);
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid var(--prmry-white-color);
 }
 
 .chat-box:not(:nth-last-child(n+3)),
